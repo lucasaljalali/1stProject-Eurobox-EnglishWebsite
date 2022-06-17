@@ -22,7 +22,7 @@
                <a href="#">
                 <img id="logo" src="images/logo.png" alt="Eurobox">
                </a> 
-              <ul>
+              <ul id="navlist">
                 <li><a href="#">Relocation</a></li>
                 <li><a href="#">Transfers</a></li>
                 <li><a href="#">Tours</a></li>
@@ -34,34 +34,34 @@
            </nav>
             
            <div id="main-banner">  
-               <a href="#">
-                 <div id="main-calltoaction">
-                    <h1>Want to live in Cascais?</h1>
-                    <p>According to the profile of each family, I can help with all the details that only a passionate resident knows.</p>
-                 </div>
-               </a>    
+                 <div id="main-bannercontainer">
+                   <a href="#" id="main-calltoaction"> 
+                        <span id="calltitle">Want to live in Cascais?</span><br>
+                        <span id="callsubtitle">According to the profile of each family, I can help with all the details that only a passionate resident knows.</span>
+                   </a>  
+                 </div>    
            </div>       
      </header>
 
         <smallbanners class="smallbanners-container">
-            <ul>
-               <li><a href="#">
-                   <img src="images/tourresidencialCover.jpg"
-                   alt="TourResidencialCover">
-                   <h2>Residencial Tour</h2>
-               </a></li>
-    
-               <li><a href="#">
-                   <img src="images/realestateCover.JPG"
-                   alt="RealEstateCover">
-                   <h2>Real Estate</h2>
-               </a></li>      
+            <ul id="smallbannerslist">
+               <li href="#" class="smallbanner" id="smallbanner1">
+                     <span>Real Estate</span>
+               </li>
+               
+               <li href="#" class="smallbanner" id="smallbanner2">
+                     <span>Residencial<br>Tour</span>
+               </li>   
+               
+               <li href="#" class="smallbanner" id="smallbanner3">
+                     <span>Others</span>
+               </li>    
             </ul>
         </smallbanners>
 
         
         <form class="form-container">
-            <p>Contact Us</p>
+            <p>Contact us:</p>
             <input type="text" name="Name" placeholder="first and last name">
             <input type="text" name="Phone" placeholder="phone number">
             <input type="email" name="E-mail" placeholder="e-mail">
@@ -71,7 +71,7 @@
 
 
         <footer>
-            <h4>Lucas al Jalali &copy; 2022</h4>
+            <span>Lucas al Jalali &copy; 2022</span>
         </footer>
      
     </div>

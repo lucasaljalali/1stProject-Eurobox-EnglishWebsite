@@ -8,7 +8,7 @@ body{
     background-color: rgb(30, 30, 30);
 }
 
-h1, h2, h3, h4, h5, h6, p, span{
+a, h1, h2, h3, h4, h5, h6, p{
     margin: 0;
     color: rgb(245, 245, 245);
 }
@@ -58,26 +58,26 @@ nav::after{
     margin-top: 25px;
 }
 
-.nav-container ul{
+#navlist{
     float: right;
     height: 100px;
     line-height: 100px;
     margin: 0;
 }
 
-.nav-container li{
+#navlist li{
     list-style: none;
     float: left;
     margin: 0 15px;
 }
 
-.nav-container li a{
+#navlist li a{
     text-decoration: none;
     color: rgb(245, 245, 245);
     transition: .5s;
 }
 
-.nav-container li a:hover{
+#navlist li a:hover{
     color: #666;
 }
 
@@ -86,38 +86,85 @@ nav::after{
 #main-banner{
     background: url("../LearningHTML&CSS/images/baiaporcima.jpg") no-repeat;
     background-size: cover;
-    background-position: 0 55%;
-    position: relative;
     margin-top: 100px;
 }
 
-#main-calltoaction{
-    position: relative;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+#main-bannercontainer{
+    margin-left: 10%;
+    margin-right: 63%;
     padding-top: 10em;
-    padding-bottom: 35em;
-    text-align: left;
+    padding-bottom: 30em;
 }
 
-#main-banner a{
+#main-calltoaction{
     text-decoration: none;
+    transition: 0.5s;
+}
+
+#main-calltoaction:hover{
+    color: rgb(56, 56, 56);
+}
+
+#calltitle{
+    font-size: xxx-large;
+    text-shadow: 0.05em 0.05em 0.05em rgb(30, 30, 30);
+}
+
+#callsubtitle{
+    font-size: x-large;
+    text-shadow: 0.1em 0.1em 0.05em rgb(30, 30, 30);
+}
+
+
+/* small banners */
+.smallbanners-container img{
+    max-height: 200px;
+}
+
+#smallbannerslist{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0%;
+}
+
+.smallbanner{
+    font-size: xx-large;
+    padding: 3em 5em;
+    cursor: pointer;
     color: rgb(245, 245, 245);
-    text-justify: distribute;
+    text-shadow: 0.05em 0.05em 0.05em rgb(30, 30, 30);
+    text-align: center;
+    justify-content: center;
 }
 
-#main-calltoaction h1{
-    font-size: 35px;
-    transition: .5s;
+.smallbanner:hover{
+    color: rgb(30, 30, 30);
 }
 
-#main-calltoaction p{
-    font-size: 20px;
-    max-height: 20px
+#smallbanner1{
+    background: url("../LearningHTML&CSS/images/realestateCover.JPG") no-repeat;
+    background-size: contain;
 }
 
-#main-calltoaction h1:hover{
-    color: #666;
+#smallbanner2{
+    background: url("../LearningHTML&CSS/images/tourresidencialCover.jpg") no-repeat;
+    background-size: contain;
 }
 
+#smallbanner3{
+    background: url("../LearningHTML&CSS/images/eunabaia.jpg") no-repeat;
+    background-size: cover;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    margin: 2em 33em;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    color:#666;
+}
