@@ -7,56 +7,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eurobox Portugal</title>
     <link rel="stylesheet" href="style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a063968995.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <div class="container"> 
 
-    <nav>
-        <img src="images/logo.png"
-        alt="logo"
-        >    
-        <ul>
-            <li><a href="#">Relocation</a></li>
-            <li><a href="#">Transfers</a></li>
-            <li><a href="#">Tours</a></li>
-            <li><a href="#">Others</a></li>
-            <li><a href="#">Youtube</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+     <header>
+            <nav>
+             <div class="nav-container">
+               <a href="#">
+                <img id="logo" src="images/logo.png" alt="Eurobox">
+               </a> 
+              <ul>
+                <li><a href="#">Relocation</a></li>
+                <li><a href="#">Transfers</a></li>
+                <li><a href="#">Tours</a></li>
+                <li><a href="#">Others</a></li>
+                <li><a href="#">Youtube</a></li> 
+                <li><a href="#">Contact</a></li>
+              </ul>
+             </div> 
+           </nav>
+            
+           <div id="main-banner">  
+               <a href="#">
+                 <div id="main-calltoaction">
+                    <h1>Want to live in Cascais?</h1>
+                    <p>According to the profile of each family, I can help with all the details that only a passionate resident knows.</p>
+                 </div>
+               </a>    
+           </div>       
+     </header>
 
-    <div class="main_services">
-         <h1>Want to live in Cascais?</h1>
-         <p>According to the profile of each family, I can help with all the details that only a passionate resident knows.</p>
-         <a href="#">
-         <img src="images/eunabaia.jpg" 
-         alt="Specialist"
-         ></a>
-         <a href="#">More</a>
+        <smallbanners class="smallbanners-container">
+            <ul>
+               <li><a href="#">
+                   <img src="images/tourresidencialCover.jpg"
+                   alt="TourResidencialCover">
+                   <h2>Residencial Tour</h2>
+               </a></li>
+    
+               <li><a href="#">
+                   <img src="images/realestateCover.JPG"
+                   alt="RealEstateCover">
+                   <h2>Real Estate</h2>
+               </a></li>      
+            </ul>
+        </smallbanners>
+
+        
+        <form class="form-container">
+            <p>Contact Us</p>
+            <input type="text" name="Name" placeholder="first and last name">
+            <input type="text" name="Phone" placeholder="phone number">
+            <input type="email" name="E-mail" placeholder="e-mail">
+            <input type="text" name="Message" placeholder="message">        
+            <button>Send</button>    
+        </form>
+
+
+        <footer>
+            <h4>Lucas al Jalali &copy; 2022</h4>
+        </footer>
+     
     </div>
-
-    <div class="other_services">
-     <ul>
-        <li><a href="#">
-            <img src="images/tourresidencialCover.jpg"
-            alt="TourResidencialCover">
-            <h2>Residencial Tour</h2>
-        </a></li>
-
-        <li><a href="#">
-            <img src="images/realestateCover.JPG"
-            alt="RealEstateCover">
-            <h2>Real Estate</h2>
-        </a></li>      
-     </ul>
-    </div>
-
-    <footer>
-     <p>Lucas al Jalali &copy; 2022</p>
-    </footer>
-   
 </body>
 
-</html> 
-
-/** first day ended **/
+</html>
