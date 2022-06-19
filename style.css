@@ -116,26 +116,23 @@ nav::after{
 }
 
 
-/* small banners */
-.smallbanners-container img{
-    max-height: 200px;
-}
-
+/* small banners 
 #smallbannerslist{
     display: flex;
     justify-content: center;
     list-style: none;
     padding: 0%;
+    max-height: 250px;
 }
 
 .smallbanner{
     font-size: xx-large;
-    padding: 3em 5em;
+    height: 100px;
+    width: 200px;
     cursor: pointer;
     color: rgb(245, 245, 245);
     text-shadow: 0.05em 0.05em 0.05em rgb(30, 30, 30);
     text-align: center;
-    justify-content: center;
 }
 
 .smallbanner:hover{
@@ -159,7 +156,7 @@ nav::after{
 
 .form-container{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 2em 33em;
 }
 
@@ -167,4 +164,22 @@ footer{
     display: flex;
     justify-content: center;
     color:#666;
+}*/ 
+.bannerslist{
+    width: 100%;
+    max-width: 1200px;
+    min-width: 800px;
+    margin: 10px auto;
 }
+
+.banner{
+    display: inline-block;
+    width: 24.5%;
+    margin: 0px 0px;
+    text-align: center;
+}
+
+.bannerimage{
+    width: 100%;
+}
+    
