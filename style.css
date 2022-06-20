@@ -73,11 +73,14 @@ nav::after{
 
 #navlist li a{
     text-decoration: none;
+    font-size: large;
+    font-weight: 300;
     color: rgb(245, 245, 245);
-    transition: .5s;
+    transition: 0.5s;
 }
 
 #navlist li a:hover{
+    font-size: larger;
     color: #666;
 }
 
@@ -116,70 +119,49 @@ nav::after{
 }
 
 
-/* small banners 
-#smallbannerslist{
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0%;
-    max-height: 250px;
-}
-
-.smallbanner{
-    font-size: xx-large;
-    height: 100px;
-    width: 200px;
-    cursor: pointer;
-    color: rgb(245, 245, 245);
-    text-shadow: 0.05em 0.05em 0.05em rgb(30, 30, 30);
-    text-align: center;
-}
-
-.smallbanner:hover{
-    color: rgb(30, 30, 30);
-}
-
-#smallbanner1{
-    background: url("../LearningHTML&CSS/images/realestateCover.JPG") no-repeat;
-    background-size: contain;
-}
-
-#smallbanner2{
-    background: url("../LearningHTML&CSS/images/tourresidencialCover.jpg") no-repeat;
-    background-size: contain;
-}
-
-#smallbanner3{
-    background: url("../LearningHTML&CSS/images/eunabaia.jpg") no-repeat;
-    background-size: cover;
-}
-
-.form-container{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 2em 33em;
-}
-
-footer{
-    display: flex;
-    justify-content: center;
-    color:#666;
-}*/ 
+/* secondary banners */
 .bannerslist{
+    text-align: center;
+    font-size: larger;
+    font-weight: 300;
     width: 100%;
-    max-width: 1200px;
+    max-width: 2000px;
     min-width: 800px;
-    margin: 10px auto;
+    margin: auto;
 }
 
-.banner{
+.bannerarea{
     display: inline-block;
-    width: 24.5%;
-    margin: 0px 0px;
-    text-align: center;
+    inline-size: auto;
+    width: 24%;
+    margin: 1.5% auto;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.bannerarea:hover{
+    opacity: 70%;
+    width: 25%;
+    color: rgb(145, 145, 145);
+    font-size: x-large;
+    margin: 0% 0%;
 }
 
 .bannerimage{
     width: 100%;
 }
-    
+
+/* form */
+.form-container{
+    max-width: 1000px;
+    margin: 1% auto;
+    text-align: center;
+    color: white;
+}
+
+/* footer*/
+footer{
+    display: flex;
+    justify-content: center;
+    color:#666;
+}   
