@@ -60,6 +60,7 @@ nav::after{
 
 #navlist{
     float: right;
+    padding: 0%;
     height: 100px;
     line-height: 100px;
     margin: 0;
@@ -68,7 +69,7 @@ nav::after{
 #navlist li{
     list-style: none;
     float: left;
-    margin: 0 15px;
+    margin: 0 25px;
 }
 
 #navlist li a{
@@ -120,12 +121,17 @@ nav::after{
 
 
 /* secondary banners */
+.bannerscontainer{
+    margin-bottom: 20px;
+    border-bottom: rgb(66, 66, 66) solid 1px;
+}
+
 .bannerslist{
     text-align: center;
     font-size: larger;
     font-weight: 300;
     width: 100%;
-    max-width: 2000px;
+    max-width: 90%;
     min-width: 800px;
     margin: auto;
 }
@@ -149,19 +155,99 @@ nav::after{
 
 .bannerimage{
     width: 100%;
+    margin-bottom: 0.5em;
 }
 
 /* form */
 .form-container{
-    max-width: 1000px;
-    margin: 1% auto;
+    max-width: 1200px;
+    margin: 2% auto;
     text-align: center;
     color: white;
+    font-size: large;
+}
+
+.form-input{
+    font-size: large;
+}
+
+.form-button{
+    background-color: rgb(83, 83, 83);
+    color: rgb(250, 250, 250);
+    margin-left: 0.3em;
+    font-size: medium;
+    padding: 0.25em 1.5em;
+    border: rgb(87, 87, 87) solid 2px;
+    border-radius: 0.5em/0.5em;
 }
 
 /* footer*/
 footer{
     display: flex;
+    font-size: small;
     justify-content: center;
     color:#666;
 }   
+
+/* responsive */
+@media screen and (max-width: 1440px) {
+
+    nav{
+        height: 4em;
+    }
+
+    #navlist {
+        height: 4em;
+        line-height: 4em;
+    }
+
+    #navlist li a{
+        font-size: small;
+        font-weight: 300;
+    }
+    
+    #navlist li a:hover{
+        font-size: smaller;
+    }
+
+    #logo{
+        width: 100px;
+    }
+    
+    #main-banner {
+        margin-top: 4em;
+    }
+
+    #main-bannercontainer {
+        padding-top: 7em;
+        padding-bottom: 15em;
+    }
+    
+    #calltitle{
+        font-size: xx-large;
+    }
+    
+    #callsubtitle{
+        font-size: medium;
+    }
+
+    .bannerslist {
+        font-size: small;
+    }
+
+    .bannerarea:hover{
+        font-size: medium;
+    }
+
+    .form-container{
+        font-size: smaller;
+    }
+
+    .form-input{
+        font-size: small;
+    }
+
+    .form-button{
+        font-size: smaller;
+    }
+}
