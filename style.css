@@ -53,7 +53,7 @@ nav::after{
 }
 
 #logo{
-    width: 150px;
+    width: 8%;
     height: auto;
     margin-top: 25px;
 }
@@ -69,7 +69,7 @@ nav::after{
 #navlist li{
     list-style: none;
     float: left;
-    margin: 0 25px;
+    margin: 0% 1.5em;
 }
 
 #navlist li a{
@@ -91,6 +91,8 @@ nav::after{
     background: url("../LearningHTML&CSS/images/baiaporcima.jpg") no-repeat;
     background-size: cover;
     margin-top: 100px;
+    background-color: rgba(0, 0, 0, 0.26);
+    background-blend-mode: multiply;
 }
 
 #main-bannercontainer{
@@ -131,8 +133,7 @@ nav::after{
     font-size: larger;
     font-weight: 300;
     width: 100%;
-    max-width: 90%;
-    min-width: 800px;
+    max-width: 95%;
     margin: auto;
 }
 
@@ -142,15 +143,15 @@ nav::after{
     width: 24%;
     margin: 1.5% auto;
     text-decoration: none;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .bannerarea:hover{
     opacity: 70%;
-    width: 25%;
+    width: 24.7%;
     color: rgb(145, 145, 145);
     font-size: x-large;
-    margin: 0% 0%;
+    margin: 0.5% auto;
 }
 
 .bannerimage{
@@ -160,7 +161,7 @@ nav::after{
 
 /* form */
 .form-container{
-    max-width: 1200px;
+    max-width: 90%;
     margin: 2% auto;
     text-align: center;
     color: white;
@@ -168,6 +169,7 @@ nav::after{
 }
 
 .form-input{
+    max-width: 15%;
     font-size: large;
 }
 
@@ -192,26 +194,22 @@ footer{
 /* responsive */
 @media screen and (max-width: 1440px) {
 
-    nav{
-        height: 4em;
-    }
-
-    #navlist {
+    nav, #navlist {
         height: 4em;
         line-height: 4em;
     }
 
-    #navlist li a{
-        font-size: small;
+    #navlist li a {
+        font-size: 90%;
         font-weight: 300;
     }
     
-    #navlist li a:hover{
-        font-size: smaller;
+    #navlist li a:hover {
+        font-size: 95%;
     }
 
-    #logo{
-        width: 100px;
+    .form-container, .form-button {
+        font-size: smaller;
     }
     
     #main-banner {
@@ -223,31 +221,114 @@ footer{
         padding-bottom: 15em;
     }
     
-    #calltitle{
+    #calltitle {
         font-size: xx-large;
     }
     
-    #callsubtitle{
+    #callsubtitle, .bannerarea:hover {
         font-size: medium;
     }
 
     .bannerslist {
+        font-size: smaller;
+    }
+
+    .form-input {
         font-size: small;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    
+    #main-bannercontainer {
+        padding-top: 6em;
+        padding-bottom: 13em;
+    }
+    
+    #calltitle {
+        font-size: x-large;
+    }
+    
+    #callsubtitle {
+        font-size: small;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    #main-bannercontainer {
+        text-align: center;
+        padding-top: 5em;
+        padding-bottom: 10em;
+        margin: 0 25%
+    }
+
+    #main-banner {
+        background-color: rgba(0, 0, 0, 0.26);
+        background-blend-mode:multiply;
+    }
+
+    #callsubtitle {
+        font-size: smaller;
     }
 
     .bannerarea:hover{
-        font-size: medium;
-    }
-
-    .form-container{
-        font-size: smaller;
-    }
-
-    .form-input{
         font-size: small;
     }
 
-    .form-button{
-        font-size: smaller;
+}
+
+@media screen and (max-width: 425px) {
+    
+    .nav-container {
+        margin: auto;
+        max-width: 95%;
+    }
+
+    #main-bannercontainer {
+        padding-top: 4em;
+        padding-bottom: 10em;
+        margin: 0 10%
+    }
+
+    .form-input{
+        display: block;
+        max-width: 50%;
+        margin: 1% auto;
+    }
+
+    .form-button {
+        margin-top: 1%;
+    }
+
+    .bannerslist{
+        font-size: small;
+    }
+
+    .bannerarea {
+        width: 49%;
+    }
+
+    .bannerarea:hover {
+        width: 50%;
+        font-size: medium;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+
+    #navlist li a {
+        font-size: x-small;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    #navlist li a {
+        font-size: xx-small;
     }
 }
