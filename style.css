@@ -287,6 +287,18 @@ footer{
         max-width: 95%;
     }
 
+    #navlist li {
+        margin: 0 1em;
+    }
+
+    #navlist li a {
+        font-size:xx-small;
+    }
+
+    #navlist li a:hover{
+        font-size: x-small;
+    }
+
     #main-bannercontainer {
         padding-top: 4em;
         padding-bottom: 10em;
