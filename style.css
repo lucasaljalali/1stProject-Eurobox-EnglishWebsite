@@ -1,6 +1,7 @@
 /* general */
 html{
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
 
 body{
@@ -21,103 +22,80 @@ a, h1, h2, h3, h4, h5, h6, p{
 
 /* header */
 header{
-    position: relative;
-    top: 0;
-    height: auto;
-    width: 100%;
-}
-
-
-/* nav */
-nav{
     position: fixed;
+    display: flex;
     top: 0;
-    height: 100px;
+    height: 5em;
+    justify-content: space-between;
     width: 100%;
-    z-index: 1;
     background-color: rgb(30, 30, 30);
-    border-bottom: 0px solid rgb(51, 50, 50);
 }
 
-nav::after{
-    clear: both;
-    content: "";
-    display: block;
+.logo img{
+    max-height: 6em;
+    margin: 0.6em 4em;
 }
 
-.nav-container{
-    max-width: 90%;
-    position: relative;
-    margin-right: auto;
-    margin-left: auto;
+.nav-list{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin: 0 4em;
+    padding: 0;
 }
 
-#logo{
-    width: 8%;
-    height: auto;
-    margin-top: 25px;
-}
-
-#navlist{
-    float: right;
-    padding: 0%;
-    height: 100px;
-    line-height: 100px;
-    margin: 0;
-}
-
-#navlist li{
+.nav-list li{
     list-style: none;
-    float: left;
-    margin: 0% 1.5em;
+    justify-content: space-between;
 }
 
-#navlist li a{
+.nav-list a{
     text-decoration: none;
-    font-size: large;
-    font-weight: 300;
-    color: rgb(245, 245, 245);
+    font-size: 1em;
+    font-weight: 250;
+    padding: 1.2em;
     transition: 0.5s;
 }
 
-#navlist li a:hover{
-    font-size: larger;
+.nav-list a:hover{
     color: #666;
 }
 
 
 /* main banner */
-#main-banner{
-    background: url("../LearningHTML&CSS/images/baiaporcima.jpg") no-repeat;
+.main-banner{
+    background: url("../images/baiaporcima.jpg") no-repeat;
     background-size: cover;
-    margin-top: 100px;
+    margin-top: 5em;
     background-color: rgba(0, 0, 0, 0.26);
     background-blend-mode: multiply;
 }
 
-#main-bannercontainer{
-    margin-left: 10%;
-    margin-right: 63%;
+.main-bannercontainer{
+    margin-left: 12%;
+    margin-right: 65%;
     padding-top: 10em;
     padding-bottom: 30em;
 }
 
-#main-calltoaction{
+.main-calltoaction{
     text-decoration: none;
     transition: 0.5s;
 }
 
-#main-calltoaction:hover{
+.main-calltoaction:hover{
     color: rgb(56, 56, 56);
 }
 
-#calltitle{
-    font-size: xxx-large;
+.main-calltoaction h1{
+    font-size: 3em;
+    font-weight: 400;
     text-shadow: 0.05em 0.05em 0.05em rgb(30, 30, 30);
 }
 
-#callsubtitle{
-    font-size: x-large;
+.main-calltoaction p{
+    font-size: 1.2em;
+    font-weight: 300;
     text-shadow: 0.1em 0.1em 0.05em rgb(30, 30, 30);
 }
 
@@ -189,9 +167,10 @@ footer{
     font-size: small;
     justify-content: center;
     color:#666;
+    margin-bottom: 1000px;
 }   
 
-/* responsive */
+/* responsive 
 @media screen and (max-width: 1440px) {
 
     nav, #navlist {
@@ -235,6 +214,7 @@ footer{
 
     .form-input {
         font-size: small;
+        margin-bottom: 5000px;
     }
 
 }
