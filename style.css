@@ -1,4 +1,5 @@
 /* general */
+
 html{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
@@ -21,14 +22,17 @@ a, h1, h2, h3, h4, h5, h6, p{
 
 
 /* header */
+
 header{
     position: fixed;
     display: flex;
-    top: 0;
-    height: 6vh;
-    justify-content: space-between;
+    top: 1vh;
+    height: 7vh;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
 }
 
 .logo img{
@@ -36,39 +40,89 @@ header{
     height: 7vh;
     top: 0.8vh; 
     left: 20vw;
+    z-index: 3;
 }
 
-.nav-list{
-    display: flex;
+.nav-container{
+    position: relative;
+    width: 60vw;
     height: 100%;
-    align-items: center;
-    margin: 0 20vw 0 0;
-    padding: 0;
 }
 
-.nav-list li{
-    list-style: none;
-    justify-content: space-between;
-}
-
-.nav-list a{
-    text-decoration: none;
-    font-size: 1.3vh;
+.navHidden{
+    position: absolute;
+    font-size: .01vh;
     font-weight: 350;
-    padding: 2vh 1.5vw;
-    transition: all .3s ease-out;
+    margin: 0;
+    padding: 0;
+    padding-top: .01vh;
+    width: 100%;
+    height: .01vh;
+    background-color: transparent;
+    text-align: right;
+    transition: all .2s ease-out;
 }
 
-.nav-list a:hover{
+.navHidden li{
+    list-style: none;
+}
+
+.navHidden a{
+    color: transparent;
+}
+
+.navList{
+    position: absolute;
+    font-size: 7vw;
+    font-weight: 350;
+    margin: 0;
+    padding: 0;
+    padding-top: 10vh;
+    width: 100%;
+    height: 65vh;
+    background-color: rgb(255, 255, 255);
+    text-align: right;
+    transition: all .2s ease-out;
+}
+
+.navList li{
+    list-style: none;
+    padding: 2vh 1.5vw;
+}
+
+.navList a{
+    color: black;
+    text-decoration: none;
+}
+
+.navList a:hover{
     color: #666;
+}
+
+.menu-button{
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translate(-100%, -50%);
+    border: none;
+    fill: black;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .3s ease-out;
+    z-index: 2;
+}
+
+.menu-button:hover{
+    fill: #666;
 }
 
 /*banner*/
 
 .banners {
+    position: relative;
     height: 60vh;
     max-width: 60vw;
-    margin: 15vh auto 10vh;
+    margin: 15vh auto 5vh;
     display: grid;
     grid-template-columns: repeat(4,minmax(0,1fr));
     grid-template-rows: repeat(7,minmax(0,1fr));
@@ -80,7 +134,7 @@ header{
     background-color: rgb(0, 0, 0);
     grid-column: 1/3;
     grid-row: 1/8;
-    transition: all .5s ease-out;
+    transition: all .3s ease-out;
 }
 
 .banner2 {
@@ -89,6 +143,7 @@ header{
     grid-column: 3/4;
     grid-row: 1/4;
     align-items: center;
+    transition: all .5s ease-out;
 }
 
 .banner3 {
@@ -96,9 +151,7 @@ header{
     background-color: rgb(0, 0, 0);
     grid-column: 4/5;
     grid-row: 1/5;
-    transition: all .5s ease-out;
-    text-align: center;
-    cursor: pointer;
+    transition: all .3s ease-out;
 }
 
 .banner4 {
@@ -106,6 +159,7 @@ header{
     background-color: rgb(0, 0, 0);
     grid-column: 3/4;
     grid-row: 4/8;
+    transition: all .3s ease-out;
 }
 
 .banner5 {
@@ -113,6 +167,8 @@ header{
     background-color: rgb(0, 0, 0);
     grid-column: 4/5;
     grid-row: 5/8;
+    text-align: center;
+    transition: all .3s ease-out;
 }
 
 .banner1-image, .banner3-image, .banner4-image, .banner5-image{
@@ -146,7 +202,7 @@ header{
     top: 50%;
     transform: translate(-50%,-50%);
     color: white;
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: 200;
 }
 
@@ -179,6 +235,10 @@ header{
     transition: all .5s ease-out;
 }
 
+.banner1:hover, .banner3:hover, .banner4:hover, .banner5:hover {
+    transform: translateY(-0.2vh);
+}
+
 .banner1:hover .banner1-title{
     display: block;
 }
@@ -208,122 +268,18 @@ header{
 }
 
 
-
-
-
-
-/* antigo main banner
-.main-banner{
-    background: url("../images/baiaporcima.jpg") no-repeat;
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0.285);
-    background-blend-mode: multiply;
-}
-
-.main-bannercontainer{
-    padding-left: 8vw;
-    padding-right: 65vw;
-    padding-top: 20vh;
-    padding-bottom: 30vh;
-}
-
-.main-calltoaction{
-    text-decoration: none;
-}
-
-.calltitle{
-    font-size: 2.5vmax;
-    font-weight: 400;
-    text-shadow: 0.05em 0.05em 0.05em rgb(30, 30, 30);
-    transition: all .3s ease-out;
-}
-
-.callsubtitle{
-    color: transparent;
-    font-size: 0.8vmax;
-    font-weight: 300;
-    transition: all 1s ease-out;
-}
-
-.main-calltoaction:hover h1{
-    color: #666;
-}
-
-.main-calltoaction:hover p{
-    color: white;
-    text-shadow: 0.1em 0.1em 0.05em rgb(30, 30, 30);
-} */
-
-
-/* antigo secondary banners
-.bannerslist{
-    text-align: center;
-    font-size: larger;
-    font-weight: 300;
-    width: 100%;
-    max-width: 95%;
-    margin: auto;
-    margin-bottom: 0.1vh;
-    border-bottom: rgb(66, 66, 66) solid 1px;
-}
-
-.bannerarea{
-    display: inline-block;
-    inline-size: auto;
-    width: 24%;
-    margin: 1% auto;
-    text-decoration: none;
-    transition: all .3s ease-out;
-}
-
-.banner-image-container{
-    position: relative;
-}
-
-.banner-image{
-    width: 100%;
-    transition: all .3s ease-out;
-}
-
-.bannerarea h1{
-    font-size: 1.5vw;
-    font-weight: 200;
-    position: absolute;
-    top: 50%;
-    margin-top: -0.75vw;
-    left: 50%;
-    margin-left: -4vw;
-    color: transparent;
-    transition: all .3s ease-out;
-}
-
-.bannerarea:hover .banner-image{
-    opacity: 10%;
-    width: 100%;
-    color: rgb(145, 145, 145);
-}
-
-.bannerarea:hover h1 {
-    color: white;
-}
-
-.bannerarea:hover span{
-    color: transparent;
-}
-*/
-
 /* form */
 .form-container{
     max-width: 90%;
     margin: 1% auto;
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 0.7vw;
-    font-weight: 250;
+    font-weight: 350;
 }
 
 .form-input{
-    max-width: 15%;
+    max-width: 20%;
     font-size: 0.7vw;
 }
 
@@ -337,165 +293,41 @@ header{
     border-radius: 0.5em/0.5em;
 }
 
-/* footer*/
-footer{
+
+/*social list*/
+
+.social-container {
+    position: fixed;
+    bottom: 0;
+    left: 10vw;
+}
+
+.social-list {
     display: flex;
-    font-size: small;
-    justify-content: center;
-    color:#666;
-}   
-
-/* responsive 
-@media screen and (max-width: 1440px) {
-
-    nav, #navlist {
-        height: 4em;
-        line-height: 4em;
-    }
-
-    #navlist li a {
-        font-size: 90%;
-        font-weight: 300;
-    }
-    
-    #navlist li a:hover {
-        font-size: 95%;
-    }
-
-    .form-container, .form-button {
-        font-size: smaller;
-    }
-    
-    #main-banner {
-        margin-top: 4em;
-    }
-
-    #main-bannercontainer {
-        padding-top: 7em;
-        padding-bottom: 15em;
-    }
-    
-    #calltitle {
-        font-size: xx-large;
-    }
-    
-    #callsubtitle, .bannerarea:hover {
-        font-size: medium;
-    }
-
-    .bannerslist {
-        font-size: smaller;
-    }
-
-    .form-input {
-        font-size: small;
-        margin-bottom: 5000px;
-    }
-
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-size: 2.5vh;
 }
 
-@media screen and (max-width: 1024px) {
-    
-    #main-bannercontainer {
-        padding-top: 6em;
-        padding-bottom: 13em;
-    }
-    
-    #calltitle {
-        font-size: x-large;
-    }
-    
-    #callsubtitle {
-        font-size: small;
-    }
-
+.social-list i {
+    color:rgb(60, 60, 60);
+    padding: 1vh;
+    transition: all .3s ease-out;
 }
 
-@media screen and (max-width: 768px) {
-
-    #main-bannercontainer {
-        text-align: center;
-        padding-top: 5em;
-        padding-bottom: 10em;
-        margin: 0 25%
-    }
-
-    #main-banner {
-        background-color: rgba(0, 0, 0, 0.26);
-        background-blend-mode:multiply;
-    }
-
-    #callsubtitle {
-        font-size: smaller;
-    }
-
-    .bannerarea:hover{
-        font-size: small;
-    }
-
+.social-list i:hover {
+    transform: translateY(-5%);
+    color: black;
 }
 
-@media screen and (max-width: 425px) {
-    
-    .nav-container {
-        margin: auto;
-        max-width: 95%;
-    }
-
-    #navlist li {
-        margin: 0 1em;
-    }
-
-    #navlist li a {
-        font-size:xx-small;
-    }
-
-    #navlist li a:hover{
-        font-size: x-small;
-    }
-
-    #main-bannercontainer {
-        padding-top: 4em;
-        padding-bottom: 10em;
-        margin: 0 10%
-    }
-
-    .form-input{
-        display: block;
-        max-width: 50%;
-        margin: 1% auto;
-    }
-
-    .form-button {
-        margin-top: 1%;
-    }
-
-    .bannerslist{
-        font-size: small;
-    }
-
-    .bannerarea {
-        width: 49%;
-    }
-
-    .bannerarea:hover {
-        width: 50%;
-        font-size: medium;
-    }
-
-}
-
-@media screen and (max-width: 375px) {
-
-    #navlist li a {
-        font-size: x-small;
-    }
-
-}
-
-@media screen and (max-width: 320px) {
-
-    #navlist li a {
-        font-size: xx-small;
-    }
+.social-list::after {
+    content: "";
+    background-color: rgb(60, 60, 60);
+    width: 10%;
+    height: 20vh;
+    transform-origin: top;
+    transform: skewX(15deg)
 }
