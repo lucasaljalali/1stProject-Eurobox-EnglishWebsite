@@ -1,6 +1,4 @@
 function changeClass() {
-    var x = document.getElementById("hiddenList");
-    
-    x.classList.toggle("navList");
-
+        const navUl = document.getElementById("hiddenList");
+        (navUl.className == "navHidden") ? navUl.className = "navList" : navUl.className = "navHidden";
 }
