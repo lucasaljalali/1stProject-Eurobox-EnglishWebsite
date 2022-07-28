@@ -65,23 +65,29 @@ a, h1, h2, h3, h4, h5, h6, p{
 
 /* header */
 
-header{
+header {
     position: fixed;
     display: flex;
-    top: 1rem;
-    height: 7rem;
+    top: 0;
+    height: 160px;
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     z-index: 1;
+    transition: top 0.3s;
 }
 
 .logo img{
     position: absolute;
     height: 7rem;
-    top: 0.8rem;
+    top: 2rem;
     z-index: 3;
+    transition: all .2s ease-out;
+}
+
+.logo img:hover {
+    transform: translateY(2%);
 }
 
 .nav-container{
@@ -106,7 +112,7 @@ header{
 
 .navList{
     position: absolute;
-    font-size: 7vw;
+    font-size: 5vw;
     font-weight: 350;
     margin: 0;
     padding: 0;
@@ -135,7 +141,7 @@ header{
 .menu-button{
     position: absolute;
     left: 100%;
-    top: 50%;
+    top: 45%;
     transform: translate(-100%, -50%);
     padding: 0;
     margin: 0;
@@ -143,8 +149,13 @@ header{
     fill: black;
     background-color: transparent;
     cursor: pointer;
-    transition: all .3s ease-out;
+    transition: all .1s ease-out;
     z-index: 2;
+}
+
+.menu-button svg{
+    width: 4rem;
+    height: 4rem;
 }
 
 .menu-button:hover{
@@ -154,16 +165,16 @@ header{
 .languageList {
     position: absolute;
     left: 100%;
-    top: 100%;
+    top: 90%;
     transform: translate(-100%, -50%);
     display: flex;
-    width: 65px;
+    width: 4rem;
     padding: 0;
     margin: 0;
     justify-content: space-between;
     list-style: none;
-    font-size: 1rem;
-    line-height: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
 }
 
 .languageList li:last-of-type::before {
@@ -171,9 +182,9 @@ header{
     position: absolute;
     background-color: rgb(0, 0, 0);
     width: .05rem;
-    height: 1rem;
+    height: 1.3rem;
     padding: 0;
-    transform: translateX(-1500%);
+    transform: translateX(-800%);
 }
 
 .languageList a{
@@ -184,18 +195,24 @@ header{
 /*main*/
 
 .main-container {
-    animation: .5s ease-out 0s 1 mainFadeIn;
+    animation: .2s ease-out 0s 1 mainFadeIn;
 }
 
 .banners {
     position: relative;
     height: 60vh;
     max-width: 60vw;
-    margin: 250px auto 0;
+    margin: 16rem auto 0;
     display: grid;
     grid-template-columns: repeat(4,minmax(0,1fr));
     grid-template-rows: repeat(7,minmax(8vh,1fr));
     grid-gap: 1rem;
+}
+
+.banners::after {
+    content: '';
+    height: 15vh;
+    
 }
 
 .banner1 {
@@ -203,7 +220,8 @@ header{
     background-color: rgb(0, 0, 0);
     grid-column: 1/3;
     grid-row: 1/8;
-    transition: all .3s ease-out;
+    transition: all .2s ease-out;
+    overflow: hidden;
 }
 
 .banner2 {
@@ -213,6 +231,7 @@ header{
     grid-row: 1/4;
     align-items: center;
     transition: all .5s ease-out;
+    overflow: hidden;
 }
 
 .banner3 {
@@ -220,7 +239,8 @@ header{
     background-color: rgb(0, 0, 0);
     grid-column: 4/5;
     grid-row: 1/5;
-    transition: all .3s ease-out;
+    transition: all .2s ease-out;
+    overflow: hidden;
 }
 
 .banner4 {
@@ -228,7 +248,8 @@ header{
     background-color: rgb(0, 0, 0);
     grid-column: 3/4;
     grid-row: 4/8;
-    transition: all .3s ease-out;
+    transition: all .2s ease-out;
+    overflow: hidden;
 }
 
 .banner5 {
@@ -237,30 +258,32 @@ header{
     grid-column: 4/5;
     grid-row: 5/8;
     text-align: center;
-    transition: all .3s ease-out;
+    transition: all .2s ease-out;
+    overflow: hidden;
 }
 
-.banner1-image, .banner3-image, .banner4-image, .banner5-image{
-    min-height: 100%;
+.bannerImage {
+    height: 100%;
     max-width: 100%;
     object-fit: cover;
     object-position: 0%;
-    transition: all .5s ease-out;
+    transition: all .2s ease-out;
+    opacity: 1;
 }
 
-.banner1-image:hover, .banner3-image:hover, .banner4-image:hover, .banner5-image:hover {
-    opacity: 10%;
+.bannerImage:hover {
+    opacity: 5%;
 }
 
-.banner3-image {
+#banner3-image {
     object-position: 50%;
 }
 
-.banner4-image {
+#banner4-image {
     object-position: 60%;
 }
 
-.banner5-image {
+#banner5-image {
     object-position: 15%;
 }
 
@@ -280,6 +303,7 @@ header{
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    width: 80%;
     color: white;
     margin: auto;
     font-size: 3rem;
@@ -295,9 +319,9 @@ header{
     transform: translate(-50%,-50%);
     color: white;
     opacity: 0;
-    max-width: 80%;
+    width: 80%;
     margin: auto;
-    font-size: 1vw;
+    font-size: 1.5rem;
     font-weight: 200;
     text-align: center;
     transition: all .5s ease-out;
@@ -348,7 +372,7 @@ header{
     align-items: center;
     margin: 0;
     padding: 0;
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .social-list i {
@@ -375,23 +399,22 @@ header{
 
 .secondaryPages-main-container {
     position: relative;
-    height: 70vh;
+    min-height: 70vh;
     max-width: 60vw;
-    top: 5vh;
+    top: 8rem;
     margin: 5vh auto;
     display: grid;
     grid-template-columns: repeat(4,minmax(0,1fr));
     grid-template-rows: repeat(7, auto);
     grid-gap: 1vw;
     animation: .3s ease-out 0s 1 mainFadeIn;
-    overflow: hidden;
 }
 
 .mainTitle {
     grid-column: 1/5;
     grid-row: 1/2;
     height: 4.2vw;
-    font-size: 3vw;
+    font-size: 8rem;
     font-weight: 350;
     margin: 0;
     padding: 0;
@@ -404,7 +427,7 @@ header{
     position: relative;
     overflow: hidden;
     display: block;
-    line-height: .8;
+    line-height: .9;
 }
 
 .mainTitle span::before{
@@ -444,19 +467,19 @@ header{
     padding: 0;
     list-style: decimal;
     list-style-position: inside;
-    justify-content:flex-start;
+    justify-content:space-between;
 }
 
 #relocation .sideList li {
-    font-size: 1.5vw;
+    font-size: 3rem;
     font-weight: 500;
-    margin-bottom: 3vw;
+    margin-bottom: 0rem;
 }
 
 #relocation .sideList p {
-    font-size: 1vw;
+    font-size: 2.5rem;
     font-weight: 300;
-    margin-top: .5vw;
+    margin-top: 1rem;
     text-align: justify;
 }
 
@@ -479,6 +502,7 @@ header{
 #transfer .sideText {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     max-height: 100%;
     grid-column: 3/5;
     grid-row: 2/8;
@@ -487,26 +511,24 @@ header{
 }
 
 #transfer .sideText p {
-    font-size: 2vw;
-    font-weight: 400;
+    font-size: 4rem;
+    font-weight: 300;
     text-align: justify;
-    margin-bottom: 2vw;
 }
 
 #transfer .sideText ul {
-    padding-left: 1.3vw;
-    margin: 0 0 2vw 0;
-    font-size: 1.5vw;
-    font-weight: 350;
+    padding-left: 3rem;
+    font-size: 3.5rem;
+    font-weight: 400;
 }
 
 #transfer .sideText li {
-    margin-bottom: 2vw;
+    margin-bottom: 3vw;
 }
 
 #transfer .sideText span {
-    font-size: 1vw;
-    font-weight: 400;
+    font-size: 2.3rem;
+    font-weight: 300;
     color: white;
     background: rgb(0, 0, 0);
     margin: 0 auto 0 0;
@@ -532,6 +554,7 @@ header{
 #residencial_tour .sideText {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     max-height: 100%;
     grid-column: 3/5;
     grid-row: 2/8;
@@ -540,14 +563,13 @@ header{
 }
 
 #residencial_tour .sideText p {
-    font-size: 1.2vw;
-    font-weight: 400;
+    font-size: 3rem;
+    font-weight: 300;
     text-align: justify;
-    margin-bottom: 2vw;
 }
 
 #residencial_tour .sideText span {
-    font-size: 1vw;
+    font-size: 3rem;
     font-weight: 400;
     color: white;
     background: rgb(0, 0, 0);
@@ -574,6 +596,7 @@ header{
 #tour .sideText {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     max-height: 100%;
     grid-column: 3/5;
     grid-row: 2/8;
@@ -582,18 +605,17 @@ header{
 }
 
 #tour .sideText p {
-    font-size: 1.5vw;
+    font-size: 4rem;
     font-weight: 400;
     text-align: justify;
-    margin-bottom: 1.5vw;
+    margin-bottom: 3rem;
 }
 
 #tour .sideText ul {
     padding-left: 1.3vw;
     margin: 0;
-    font-size: 1.2vw;
+    font-size: 3rem;
     font-weight: 350;
-    margin-bottom: 1.5vw;
 }
 
 #tour .sideText li {
@@ -601,7 +623,7 @@ header{
 }
 
 #tour .sideText span {
-    font-size: 1vw;
+    font-size: 2.2rem;
     font-weight: 400;
     color: white;
     background: rgb(0, 0, 0);
@@ -612,8 +634,204 @@ header{
 
 /*media query*/
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 2560px) {
+    header {
+        height: 7.5rem;
+    }
+
+    .logo img{
+        height: 5rem;
+        top: 1.5rem;
+    }
+
+    .menu-button svg {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .languageList {
+        width: 3rem;
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    .languageList li:last-of-type::before {
+        height: 1rem;
+        transform: translateX(-500%);
+    }
     
+    .banners {
+        margin: 11rem auto 0;;
+    }
+
+    .social-list {
+        font-size: 2.5rem;
+    }
+
+    /*secondary pages*/
+    .secondaryPages-main-container {
+        top: 5rem;
+    }
+
+    .mainTitle {
+        font-size: 5rem;
+    }
+
+    #relocation .sideList li {
+        font-size: 2rem;
+    }
+
+    #relocation .sideList p {
+        font-size: 1.7rem;
+    }
+
+    #transfer .sideText p {
+        font-size: 2.5rem;
+    }
+
+    #transfer .sideText ul {
+        font-size: 2.2rem;
+    }
+    
+    #transfer .sideText span {
+        font-size: 1.5rem;
+    }
+
+    #tour .sideText p {
+        font-size: 2.55rem;
+        margin-bottom: 0;
+    }
+
+    #tour .sideText ul {
+        font-size: 2rem;
+    }
+
+    #tour .sideText span {
+        font-size: 1.3rem;
+    }
+
+    #residencial_tour .sideText p {
+        font-size: 2rem;
+    }
+
+    #residencial_tour .sideText span {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 1920px) {
+    header {
+        height: 6rem;
+    }
+    .logo img{
+        height: 4rem;
+        top: 1.5rem;
+    }
+
+    .menu-button svg {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
+    .languageList {
+        width: 2.25rem;
+        font-size: .75rem;
+        line-height: .75rem;
+    }
+
+    .languageList li:last-of-type::before {
+        height: .75rem;
+        transform: translateX(-500%);
+    }
+
+    .banners {
+        margin: 8.5rem auto 0;;
+    }
+
+    .social-list {
+        font-size: 2rem;
+    }
+
+    /*secondary pages*/
+    .secondaryPages-main-container {
+        top: 4rem;
+    }
+
+    .mainTitle {
+        font-size: 3.5rem;
+    }
+
+    #relocation .sideList li {
+        font-size: 1.5rem;
+    }
+
+    #relocation .sideList p {
+        font-size: 1.3rem;
+    }
+
+    #transfer .sideText p {
+        font-size: 1.8rem;
+    }
+
+    #transfer .sideText ul {
+        font-size: 1.65rem;
+    }
+    
+    #transfer .sideText span {
+        font-size: 1.1rem;
+    }
+
+    #tour .sideText p {
+        font-size: 2rem;
+        margin-bottom: 0;
+    }
+
+    #tour .sideText ul {
+        font-size: 1.5rem;
+    }
+
+    #tour .sideText span {
+        font-size: 1rem;
+    }
+
+    #residencial_tour .sideText p {
+        font-size: 1.5rem;
+    }
+
+    #residencial_tour .sideText span {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    header {
+        height: 4.5rem;
+    }
+    .logo img{
+        height: 3rem;
+        top: 1.125rem;
+    }
+
+    .menu-button svg {
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+
+    .languageList {
+        width: 1.7rem;
+        font-size: .6rem;
+        line-height: .6rem;
+    }
+
+    .languageList li:last-of-type::before {
+        height: .6rem;
+        transform: translateX(-200%);
+    }
+
+    .banners {
+        margin: 6.5rem auto 0;;
+    }
+
     .banner1-title, .banner3-title, .banner4-title, .banner5-title{
         font-size: 1.8rem;
     }
@@ -621,13 +839,96 @@ header{
     .calltitle {
         font-size: 2rem;
     }
+
+    .callsubtitle {
+        font-size: 1rem;
+    }
+
+    .social-list {
+        font-size: 1.5rem;
+    }
+
+    /*secondary pages*/
+    .secondaryPages-main-container {
+        top: 4rem;
+    }
+
+    .mainTitle {
+        font-size: 2.5rem;
+    }
+
+    #relocation .sideList li {
+        font-size: 1.2rem;
+    }
+
+    #relocation .sideList p {
+        font-size: 1rem;
+    }
+
+    #transfer .sideText p {
+        font-size: 1.5rem;
+    }
+
+    #transfer .sideText ul {
+        font-size: 1.2rem;
+        padding-left: 1.5rem;
+    }
+    
+    #transfer .sideText span {
+        font-size: 0.8rem;
+    }
+
+    #tour .sideText p {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    #tour .sideText ul {
+        font-size: 1.2rem;
+    }
+
+    #tour .sideText span {
+        font-size: .8rem;
+    }
+
+    #residencial_tour .sideText p {
+        font-size: 1.2rem;
+    }
+
+    #residencial_tour .sideText span {
+        font-size: 1rem;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
+    header {
+        height: 4rem;
+    }
+    .logo img{
+        height: 2.5rem;
+        top: 1.125rem;
+    }
+
+    .menu-button svg {
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+
+    .languageList {
+        width: 1.7rem;
+        font-size: .6rem;
+        line-height: .6rem;
+    }
+
+    .languageList li:last-of-type::before {
+        height: .6rem;
+        transform: translateX(-200%);
+    }
+    
     .banners {
         grid-template-columns: repeat(2,minmax(0,1fr));
         grid-template-rows: repeat(9,minmax(7vh,1fr));
-        margin-top: 200px;
+        margin: 5rem auto 0;
     }
 
     .banner1 {
@@ -661,28 +962,113 @@ header{
     }
 
     .social-list {
+        font-size: 1.2rem;
+    }
+
+    .social-list::after {
+        width: 8%;
+    }
+
+    /*secondary pages*/
+    .secondaryPages-main-container {
+        top: 3rem;
+    }
+
+    .mainTitle {
         font-size: 2rem;
+    }
+
+    #relocation .sideList li {
+        font-size: 1rem;
+    }
+
+    #relocation .sideList p {
+        font-size: .9rem;
+        margin-top: 0;
+    }
+
+    #transfer .sideText p {
+        font-size: 1.2rem;
+    }
+
+    #transfer .sideText ul {
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+    
+    #transfer .sideText span {
+        font-size: 0.8rem;
+    }
+
+    #tour .sideText p {
+        font-size: 1rem;
+    }
+
+    #tour .sideText ul {
+        font-size: 1rem;
+    }
+
+    #tour .sideText span {
+        font-size: .65rem;
+    }
+
+    #residencial_tour .sideText p {
+        font-size: 1rem;
+    }
+
+    #residencial_tour .sideText span {
+        font-size: .8rem;
     }
 }
 
 @media only screen and (max-width: 768px) {
-    .logo img{
+
+    header {
         height: 6rem;
     }
 
+    .logo img{
+        height: 4rem;
+        top: 1.5rem;
+    }
+
+    .menu-button svg {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    .languageList {
+        width: 2.8rem;
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    .languageList li:last-of-type::before {
+        height: 1rem;
+        transform: translateX(-350%);
+    }
+
     .nav-container {
-        width: 70%;
+        width: 75%;
+    }
+
+    .navList {
+        font-size: 4rem;
     }
 
     .calltitle {
-        font-size: 3rem;
+        font-size: 2rem;
+    }
+
+    .callsubtitle {
+        font-size: 1.5rem;
     }
 
     .banners {
         grid-template-columns: repeat(1,minmax(0,1fr));
-        grid-template-rows: repeat(13,minmax(15vh,1fr));
-        max-width: 70%;
-        margin-top: 200px;
+        grid-template-rows: repeat(14,minmax(15vh,1fr));
+        max-width: 75%;
+        top: 4rem
     }
 
     .banner1 {
@@ -711,31 +1097,36 @@ header{
 
     .banner5 {
         grid-column: 1/2;
-        grid-row: 12/14;
+        grid-row: 12/15;
         overflow: hidden;
     }
 
     .social-container {
-        left: 87%;
+        left: 91%;
         z-index: 5;
         transition: all .5s ease-out;
     }
+    .social-list{
+        font-size: 1.5rem;
+    }
 
     .social-list i {
-        padding: .5vh;
+        padding: .8rem;
     }
 
     .social-list::after {
         transform: none;
-        transition: all .5s ease-out;
+        height: 10vh;
+        width: 5%;
+        transition: all .3s ease-out;
     }
 
     .social-container-active {
         position: fixed;
         bottom: 0;
-        left: 70%;
+        left: 75%;
         z-index: 5;
-        transition: all .5s ease-out;
+        transition: all .3s ease-out;
     }
 
     .social-list-active {
@@ -750,16 +1141,248 @@ header{
 
     .social-list-active i {
         color: rgb(60, 60, 60);
-        padding: 1vh;
+        padding: 1rem;
         transition: all .3s ease-out;
     }
 
     .social-list-active::after {
         content: "";
         width: 10%;
-        height: 30vh;
+        height: 15vh;
         background-color: rgb(60, 60, 60);
         transform: none;
-        transition: all .5s ease-out;
+        transition: all .3s ease-out;
+    }
+
+    /*secondary pages*/
+    .secondaryPages-main-container {
+        max-width: 75vw;
+        top: 4rem;
+    }
+
+    .mainTitle {
+        font-size: 3rem;
+        height: 4rem;
+    }
+
+    #relocation .sideBanner {
+        grid-column: 1/5;
+        grid-row: 2/5;
+    }
+
+    #relocation .sideBanner img {
+        height: unset;
+    }
+
+    #relocation .sideList {
+        grid-column: 1/5;
+        grid-row: 5/8;
+    }
+
+    #transfer .sideBanner {
+        grid-column: 1/5;
+        grid-row: 2/5;
+    }
+
+    #transfer .sideBanner img {
+        height: unset;
+    }
+
+    #transfer .sideText {
+        grid-column: 1/5;
+        grid-row: 5/8;
+    }
+
+    #transfer .sideText ul {
+        padding-left: 1.5rem;
+    }
+
+    #tour .sideBanner {
+        grid-column: 1/5;
+        grid-row: 2/5;
+    }
+
+    #tour .sideBanner img {
+        height: unset;
+    }
+
+    #tour .sideText {
+        grid-column: 1/5;
+        grid-row: 5/8;
+    }
+
+    #tour .sideText p {
+        font-size: 1rem;
+    }
+
+    #tour .sideText ul {
+        font-size: .8rem;
+        padding: 1.5rem 3rem;
+    }
+
+    #residencial_tour .sideBanner img {
+        object-position: 30%;
+        height: unset;
+    }
+
+    @keyframes bannerSlideResidencialTour {
+        0% {object-position: 15%;}
+        100% {object-position: 30%;}
+    }
+}
+
+@media only screen and (max-width: 428px) {
+
+    header {
+        height: 5em;
+    
+    }
+
+    .logo img{
+        height: 4rem;
+        top: 1.5rem;
+    }
+
+    .menu-button svg {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .languageList {
+        width: 2.5rem;
+        font-size: .8rem;
+        line-height: .8rem;
+    }
+
+    .languageList li:last-of-type::before {
+        height: .8rem;
+        transform: translateX(-500%);
+    }
+
+    .nav-container {
+        width: 75%;
+    }
+
+    .navList {
+        font-size: 3rem;
+    }
+
+    .banners {
+        top: 3rem
+    }
+
+    .social-container {
+        left: 89%;
+    }
+
+    /*secondary pages*/
+    .secondaryPages-main-container {
+        max-width: 75vw;
+        top: 3rem;
+    }
+
+    .mainTitle {
+        font-size: 2.5rem;
+    }
+
+    #tour .sideText ul {
+        font-size: 1rem;
+        padding: 1rem 0rem;
+        list-style: none;
+    }
+
+    #residencial_tour .sideBanner {
+        grid-column: 1/5;
+        grid-row: 2/5;
+    }
+
+    #residencial_tour .sideText {
+        grid-column: 1/5;
+        grid-row: 5/8;
+    }
+
+    #residencial_tour .sideText p {
+        font-size: .9rem;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    header {
+        height: 4em;
+    }
+
+    .logo img{
+        height: 3rem;
+        top: .5rem;
+    }
+
+    .menu-button svg {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .languageList {
+        width: 2rem;
+        font-size: .7rem;
+        line-height: .7rem;
+    }
+
+    .languageList li:last-of-type::before {
+        height: .7rem;
+        transform: translateX(-300%);
+    }
+
+    .navList {
+        font-size: 1.8rem;
+    }
+
+    .banners {
+        top: 1rem
+    }
+
+    .social-container {
+        left: 88%;
+    }
+
+    /*secondary pages*/
+    .secondaryPages-main-container {
+        max-width: 75vw;
+        top: .2rem;
+    }
+
+    .mainTitle {
+        font-size: 1.5rem;
+    }
+
+    .social-container-active {
+        left: 73%;
+    }
+
+    #relocation .sideList li {
+        font-size: .9rem;
+    }
+
+    #relocation .sideList p {
+        font-size: .8rem;
+        margin-top: 0;
+    }
+
+    #tour .sideText p {
+        font-size: .8rem;
+    }
+
+    #tour .sideText ul {
+        font-size: .9rem;
+        padding: .5rem 0rem;
+        list-style: none;
+    }
+
+    #tour .sideText span {
+        font-size: .6rem;
+        font-weight: 300;
+    }
+
+        #residencial_tour .sideText p {
+        font-size: .8rem;
     }
 }
