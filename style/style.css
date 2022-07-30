@@ -211,8 +211,7 @@ header {
 
 .banners::after {
     content: '';
-    height: 15vh;
-    
+    height: 40vh;    
 }
 
 .banner1 {
@@ -1240,7 +1239,7 @@ header {
 
     .logo img{
         height: 4rem;
-        top: 1.5rem;
+        top: 1rem;
     }
 
     .menu-button svg {
