@@ -19,7 +19,20 @@ const title3 = document.querySelector('.banner3 span');
 const title4 = document.querySelector('.banner4 span');
 const title5 = document.querySelector('.banner5 span');
 
+const banner1Container = document.getElementById('banner1Container');
+const banner2Container = document.getElementById('banner2Container');
+const banner3Container = document.getElementById('banner3Container');
+const banner4Container = document.getElementById('banner4Container');
+const banner5Container = document.getElementById('banner5Container');
 
+//changes banners shadows
+function changeBannersShadows() {
+        banner1Container.classList.toggle ('boxShadowNone');
+        banner2Container.classList.toggle ('boxShadowNone');
+        banner3Container.classList.toggle ('boxShadowNone');
+        banner4Container.classList.toggle ('boxShadowNone');
+        banner5Container.classList.toggle ('boxShadowNone');
+}
 
 //changes social bar list
 function changeSocialListClass() {
@@ -40,15 +53,15 @@ function myFunction(x) {
         if (x.matches) { // If media query matches
         changeSocialContainerClass() 
         changeSocialListClass()
+};
 }
-}
-
 
 //navbar shows up and hide on hamburguer icon click
 function changeClass() {
         const navUl = document.getElementById("hiddenList");
         (navUl.className == "navHidden") ? navUl.className = "navList" : navUl.className = "navHidden";
         myFunction(x);
+        changeBannersShadows();       
 }
 
 //everything on scroll

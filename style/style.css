@@ -209,11 +209,6 @@ header {
     grid-gap: 1rem;
 }
 
-.banners::after {
-    content: '';
-    height: 30vh;    
-}
-
 .banner1 {
     position: relative;
     background-color: rgb(0, 0, 0);
@@ -264,6 +259,10 @@ header {
     transition: all .2s ease-out;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.boxShadowNone{
+    box-shadow: none;
 }
 
 .bannerImage {
@@ -1028,12 +1027,12 @@ header {
 @media only screen and (max-width: 768px) {
 
     header {
-        height: 6rem;
+        height: 5rem;
     }
 
     .logo img{
         height: 4rem;
-        top: 1.5rem;
+        top: 1rem;
     }
 
     .menu-button svg {
@@ -1074,6 +1073,11 @@ header {
         row-gap: 10%;
         max-width: 75%;
         top: 4rem
+    }
+
+    .banners::after {
+        content: '';
+        height: 20vh;    
     }
 
     .banner1 {
