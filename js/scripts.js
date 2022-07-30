@@ -56,6 +56,7 @@ window.addEventListener("scroll", () => {
         var currentScrollPos = window.pageYOffset;
         const clientHeight = document.documentElement.clientHeight;
         const banner1Top = banner1.getBoundingClientRect().top;
+        const banner2Top = banner2.getBoundingClientRect().top;
         const banner1Bottom = banner1.getBoundingClientRect().bottom;
         const banner2Bottom = banner2.getBoundingClientRect().bottom;
         const banner3Bottom = banner3.getBoundingClientRect().bottom;
@@ -64,14 +65,14 @@ window.addEventListener("scroll", () => {
         
 //navbar hide on scroll down and show up again on scroll up
         (prevScrollpos > currentScrollPos) ? header.style.top = '0'
-        : (banner1Top > (headerHeightNumber * 1.2)) ? header.style.top = '0'
+        : (banner2Top > (headerHeightNumber * 1.2)) ? header.style.top = '0'
         : header.style.top = '-' + headerHeightText;
         
 //banner images gets 10% opacity on certain point of screen
         //banner1
-        (banner1Bottom > clientHeight) ? banner1.style.opacity = '1'
-        : (banner1Bottom < (clientHeight * 0.3)) ? banner1.style.opacity = '1'
-        : banner1.style.opacity = '0.1';
+        (banner1Bottom > (clientHeight * 1.2)) ? banner1.style.opacity = '1'
+        : (banner1Bottom < (clientHeight * 0.15)) ? banner1.style.opacity = '1'
+        : banner1.style.opacity = '0.2';
         
         /*banner2
         (banner2Bottom > (clientHeight * 0.7)) ? title2.style.opacity = '1'
@@ -83,36 +84,36 @@ window.addEventListener("scroll", () => {
         : subtitle2.style.opacity = '1';*/ 
         
         //banner3
-        (banner3Bottom > clientHeight) ? banner3.style.opacity = '1'
-        : (banner3Bottom < (clientHeight * 0.3)) ? banner3.style.opacity = '1'
-        : banner3.style.opacity = '0.1';
+        (banner3Bottom > (clientHeight * 1.2)) ? banner3.style.opacity = '1'
+        : (banner3Bottom < (clientHeight * 0.2)) ? banner3.style.opacity = '1'
+        : banner3.style.opacity = '0.2';
 
         //banner4
-        (banner4Bottom > clientHeight) ? banner4.style.opacity = '1'
-        : (banner4Bottom < (clientHeight * 0.3)) ? banner4.style.opacity = '1'
-        : banner4.style.opacity = '0.1';
+        (banner4Bottom > (clientHeight * 1.2)) ? banner4.style.opacity = '1'
+        : (banner4Bottom < (clientHeight * 0.2)) ? banner4.style.opacity = '1'
+        : banner4.style.opacity = '0.2';
 
         //banner5
-        (banner5Bottom > clientHeight) ? banner5.style.opacity = '1'
-        : (banner5Bottom < (clientHeight * 0.3)) ? banner5.style.opacity = '1'
-        : banner5.style.opacity = '0.1';
+        (banner5Bottom > (clientHeight * 1.2)) ? banner5.style.opacity = '1'
+        : (banner5Bottom < (clientHeight * 0.2)) ? banner5.style.opacity = '1'
+        : banner5.style.opacity = '0.2';
 
 //banner texts shows up on certain point of screen
         //banner1
-        (banner1Bottom > clientHeight) ? title1.style.display = 'none'
-        : (banner1Bottom < (clientHeight * 0.3)) ? title1.style.display = 'none'
+        (banner1Bottom > (clientHeight * 1.2)) ? title1.style.display = 'none'
+        : (banner1Bottom < (clientHeight * 0.2)) ? title1.style.display = 'none'
         : title1.style.display = 'block';
 
-        (banner3Bottom > clientHeight) ? title3.style.display = 'none'
-        : (banner3Bottom < (clientHeight * 0.3)) ? title3.style.display = 'none'
+        (banner3Bottom > (clientHeight * 1.2)) ? title3.style.display = 'none'
+        : (banner3Bottom < (clientHeight * 0.2)) ? title3.style.display = 'none'
         : title3.style.display = 'block';
 
-        (banner4Bottom > clientHeight) ? title4.style.display = 'none'
-        : (banner4Bottom < (clientHeight * 0.3)) ? title4.style.display = 'none'
+        (banner4Bottom > (clientHeight * 1.2)) ? title4.style.display = 'none'
+        : (banner4Bottom < (clientHeight * 0.2)) ? title4.style.display = 'none'
         : title4.style.display = 'block';
 
-        (banner5Bottom > clientHeight) ? title5.style.display = 'none'
-        : (banner5Bottom < (clientHeight * 0.3)) ? title5.style.display = 'none'
+        (banner5Bottom > (clientHeight * 1.2)) ? title5.style.display = 'none'
+        : (banner5Bottom < (clientHeight * 0.2)) ? title5.style.display = 'none'
         : title5.style.display = 'block';
 
         prevScrollpos = currentScrollPos;

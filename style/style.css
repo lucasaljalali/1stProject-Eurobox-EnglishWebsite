@@ -221,6 +221,7 @@ header {
     grid-row: 1/8;
     transition: all .2s ease-out;
     overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .banner2 {
@@ -231,6 +232,7 @@ header {
     align-items: center;
     transition: all .5s ease-out;
     overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .banner3 {
@@ -240,6 +242,7 @@ header {
     grid-row: 1/5;
     transition: all .2s ease-out;
     overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .banner4 {
@@ -249,6 +252,7 @@ header {
     grid-row: 4/8;
     transition: all .2s ease-out;
     overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .banner5 {
@@ -259,6 +263,7 @@ header {
     text-align: center;
     transition: all .2s ease-out;
     overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .bannerImage {
