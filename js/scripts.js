@@ -69,54 +69,54 @@ window.addEventListener("scroll", () => {
         
 //banner images gets 10% opacity on certain point of screen
         //banner1
-        (banner1Top > (headerHeightNumber * 1.2)) ? banner1.style.opacity = '1'
-        : (banner1Bottom < (clientHeight * 0.35)) ? banner1.style.opacity = '1'
+        (banner1Bottom > clientHeight) ? banner1.style.opacity = '1'
+        : (banner1Bottom < (clientHeight * 0.3)) ? banner1.style.opacity = '1'
         : banner1.style.opacity = '0.1';
         
-        //banner2
+        /*banner2
         (banner2Bottom > (clientHeight * 0.7)) ? title2.style.opacity = '1'
-        : (banner2Bottom < (clientHeight * 0.45)) ? title2.style.opacity = '1'
+        : (banner2Bottom < (clientHeight * 0.25)) ? title2.style.opacity = '1'
         : title2.style.opacity = '0'; 
 
         (banner2Bottom > (clientHeight * 0.7)) ? subtitle2.style.opacity = '0'
-        : (banner2Bottom < (clientHeight * 0.45)) ? subtitle2.style.opacity = '0'
-        : subtitle2.style.opacity = '1'; 
+        : (banner2Bottom < (clientHeight * 0.25)) ? subtitle2.style.opacity = '0'
+        : subtitle2.style.opacity = '1';*/ 
         
         //banner3
         (banner3Bottom > clientHeight) ? banner3.style.opacity = '1'
-        : (banner3Bottom < (clientHeight * 0.5)) ? banner3.style.opacity = '1'
+        : (banner3Bottom < (clientHeight * 0.3)) ? banner3.style.opacity = '1'
         : banner3.style.opacity = '0.1';
 
         //banner4
         (banner4Bottom > clientHeight) ? banner4.style.opacity = '1'
-        : (banner4Bottom < (clientHeight * 0.5)) ? banner4.style.opacity = '1'
+        : (banner4Bottom < (clientHeight * 0.3)) ? banner4.style.opacity = '1'
         : banner4.style.opacity = '0.1';
 
         //banner5
         (banner5Bottom > clientHeight) ? banner5.style.opacity = '1'
-        : (banner5Bottom < (clientHeight * 0.6)) ? banner5.style.opacity = '1'
+        : (banner5Bottom < (clientHeight * 0.3)) ? banner5.style.opacity = '1'
         : banner5.style.opacity = '0.1';
 
 //banner texts shows up on certain point of screen
         //banner1
-        (banner1Top > (headerHeightNumber * 1.2)) ? title1.style.display = 'none'
-        : (banner1Bottom < (clientHeight * 0.35)) ? title1.style.display = 'none'
+        (banner1Bottom > clientHeight) ? title1.style.display = 'none'
+        : (banner1Bottom < (clientHeight * 0.3)) ? title1.style.display = 'none'
         : title1.style.display = 'block';
 
         (banner3Bottom > clientHeight) ? title3.style.display = 'none'
-        : (banner3Bottom < (clientHeight * 0.5)) ? title3.style.display = 'none'
+        : (banner3Bottom < (clientHeight * 0.3)) ? title3.style.display = 'none'
         : title3.style.display = 'block';
 
         (banner4Bottom > clientHeight) ? title4.style.display = 'none'
-        : (banner4Bottom < (clientHeight * 0.5)) ? title4.style.display = 'none'
+        : (banner4Bottom < (clientHeight * 0.3)) ? title4.style.display = 'none'
         : title4.style.display = 'block';
 
         (banner5Bottom > clientHeight) ? title5.style.display = 'none'
-        : (banner5Bottom < (clientHeight * 0.6)) ? title5.style.display = 'none'
+        : (banner5Bottom < (clientHeight * 0.3)) ? title5.style.display = 'none'
         : title5.style.display = 'block';
 
         prevScrollpos = currentScrollPos;
 
-        console.log(banner5Bottom)
+        console.log(banner1Bottom)
         console.log(clientHeight)
 })
