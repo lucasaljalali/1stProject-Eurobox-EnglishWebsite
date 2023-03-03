@@ -27,11 +27,11 @@ const banner5Container = document.getElementById('banner5Container');
 
 //changes banners shadows
 function changeBannersShadows() {
-        banner1Container.classList.toggle ('boxShadowNone');
-        banner2Container.classList.toggle ('boxShadowNone');
-        banner3Container.classList.toggle ('boxShadowNone');
-        banner4Container.classList.toggle ('boxShadowNone');
-        banner5Container.classList.toggle ('boxShadowNone');
+        banner1Container?.classList.toggle ('boxShadowNone');
+        banner2Container?.classList.toggle ('boxShadowNone');
+        banner3Container?.classList.toggle ('boxShadowNone');
+        banner4Container?.classList.toggle ('boxShadowNone');
+        banner5Container?.classList.toggle ('boxShadowNone');
 }
 
 //changes social bar list
@@ -68,13 +68,13 @@ function changeClass() {
 window.addEventListener("scroll", () => {
         var currentScrollPos = window.pageYOffset;
         const clientHeight = document.documentElement.clientHeight;
-        const banner1Top = banner1.getBoundingClientRect().top;
-        const banner2Top = banner2.getBoundingClientRect().top;
-        const banner1Bottom = banner1.getBoundingClientRect().bottom;
-        const banner2Bottom = banner2.getBoundingClientRect().bottom;
-        const banner3Bottom = banner3.getBoundingClientRect().bottom;
-        const banner4Bottom = banner4.getBoundingClientRect().bottom;
-        const banner5Bottom = banner5.getBoundingClientRect().bottom;
+        const banner1Top = banner1?.getBoundingClientRect().top;
+        const banner2Top = banner2?.getBoundingClientRect().top;
+        const banner1Bottom = banner1?.getBoundingClientRect().bottom;
+        const banner2Bottom = banner2?.getBoundingClientRect().bottom;
+        const banner3Bottom = banner3?.getBoundingClientRect().bottom;
+        const banner4Bottom = banner4?.getBoundingClientRect().bottom;
+        const banner5Bottom = banner5?.getBoundingClientRect().bottom;
         
 //navbar hide on scroll down and show up again on scroll up
         (prevScrollpos > currentScrollPos) ? header.style.top = '0'
