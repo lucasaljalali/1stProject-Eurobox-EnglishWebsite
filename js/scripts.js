@@ -130,7 +130,4 @@ window.addEventListener("scroll", () => {
         : title5.style.display = 'block';
 
         prevScrollpos = currentScrollPos;
-
-        console.log(banner1Bottom)
-        console.log(clientHeight)
 })
